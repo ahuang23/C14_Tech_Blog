@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
 class User extends Model {
-    // Verify password
+    // Check that the entered password matches password in the database
     checkPassword(password) {
         return bcrypt.compareSync(password, this.password);
     }
@@ -35,7 +35,7 @@ User.init(
         }
     },
 
-    // Encrypt user's email before adding to database
+    // Encrypt user's password before adding to database
     {
         hooks: {
         beforeCreate: async (newUserData) => {
@@ -57,3 +57,4 @@ User.init(
 );
 
 module.exports = User;
+
