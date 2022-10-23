@@ -29,6 +29,8 @@
   - GitHub: https://github.com/ahuang23
   - Email: a.huang232@gmail.com
 
+  ## Example
+  ![Team Generator](./public/images/image1.png)
 
   ## Links
   [GitHub](https://github.com/ahuang23/C14_Tech_Blog)
