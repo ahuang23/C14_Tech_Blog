@@ -80,20 +80,20 @@ router.get('/post/:id', async (req, res) => {
                     }
                 },
                 {
-                    model: User,
-                    attributes: ['username']
+                model: User,
+                attributes: ['username']
                 }
             ]
         });
         if (!postData) {
             res.status(404).json({ message: 'No Post Found'})
         }
-
+        
         const posts = postData.get({ plain: true });
-
+        console.log(posts)
         res.render('singlePost', {
             posts,
-            logged_in: req.session.loggedIn,
+            loggedIn: req.session.loggedIn,
         });
  
     } catch (err) {
